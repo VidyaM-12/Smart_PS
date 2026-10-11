@@ -1,0 +1,683 @@
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-hero {
+    padding: 65px 20px 70px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(59, 130, 246, 0.13),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(168, 85, 247, 0.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #f5f3ff
+        );
+}
+
+.about-badge,
+.section-label {
+    display: inline-block;
+
+    color: #6366f1;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.about-badge {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #eef2ff;
+
+    border: 1px solid #ddd6fe;
+}
+
+.about-hero h1 {
+    max-width: 850px;
+
+    margin: 17px auto;
+
+    color: #172554;
+
+    font-size: 46px;
+
+    line-height: 1.16;
+}
+
+.about-hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed,
+        #ec4899
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-hero p {
+    max-width: 720px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
+
+.about-section,
+.technology-section,
+.safety-section {
+    padding: 70px 8%;
+}
+
+.about-section {
+    background: white;
+
+    text-align: center;
+}
+
+.about-section h2,
+.technology-section h2,
+.workflow-section h2 {
+    margin: 9px 0 12px;
+
+    color: #172554;
+
+    font-size: 30px;
+}
+
+.section-description,
+.workflow-description {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   INTRO CARDS
+   ========================= */
+
+.intro-cards {
+    max-width: 1050px;
+
+    margin: 35px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.intro-card {
+    padding: 28px 22px;
+
+    border: 1px solid #e8eaf2;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(30, 41, 59, 0.05);
+
+    transition: 0.3s;
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+}
+
+.intro-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: auto auto 16px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-size: 24px;
+}
+
+.blue-icon {
+    background: #dbeafe;
+}
+
+.purple-icon {
+    background: #ede9fe;
+}
+
+.green-icon {
+    background: #dcfce7;
+}
+
+.intro-card h3 {
+    color: #1e293b;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.intro-card p {
+    color: #64748b;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   WORKFLOW
+   ========================= */
+
+.workflow-section {
+    padding: 70px 6%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #f7f5ff
+        );
+}
+
+.workflow {
+    max-width: 1200px;
+
+    margin: 40px auto 25px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.workflow-second-row {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.workflow-step {
+    position: relative;
+
+    flex: 1;
+
+    min-width: 125px;
+
+    padding: 22px 13px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 20px rgba(30, 41, 59, 0.04);
+}
+
+.workflow-number {
+    position: absolute;
+
+    top: 8px;
+
+    right: 10px;
+
+    color: #c7d2fe;
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+.workflow-icon {
+    width: 43px;
+    height: 43px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eef2ff;
+
+    font-size: 19px;
+}
+
+.workflow-step h3 {
+    color: #1e293b;
+
+    font-size: 11px;
+
+    margin-bottom: 7px;
+}
+
+.workflow-step p {
+    color: #64748b;
+
+    font-size: 8px;
+
+    line-height: 1.6;
+}
+
+.workflow-arrow {
+    display: flex;
+
+    align-items: center;
+
+    color: #8b5cf6;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   TECHNOLOGIES
+   ========================= */
+
+.technology-section {
+    text-align: center;
+
+    background: white;
+}
+
+.technology-grid {
+    max-width: 1050px;
+
+    margin: 35px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.technology-card {
+    padding: 24px;
+
+    text-align: left;
+
+    border: 1px solid #e8eaf2;
+
+    border-radius: 17px;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+}
+
+.technology-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(30, 41, 59, 0.06);
+}
+
+.tech-icon {
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 13px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eef2ff;
+
+    font-size: 19px;
+}
+
+.technology-card h3 {
+    color: #1e293b;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.technology-card p {
+    color: #64748b;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   LANGUAGE
+   ========================= */
+
+.language-section {
+    padding: 65px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f5f3ff
+        );
+}
+
+.language-box {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    border-radius: 22px;
+
+    background: white;
+
+    border: 1px solid #e0e7ff;
+
+    box-shadow:
+        0 15px 35px rgba(30, 41, 59, 0.06);
+}
+
+.language-content {
+    max-width: 580px;
+}
+
+.language-content h2 {
+    margin: 10px 0;
+
+    color: #172554;
+
+    font-size: 27px;
+}
+
+.language-content h2 span {
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.language-content p {
+    color: #64748b;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.language-options {
+    display: flex;
+
+    gap: 12px;
+}
+
+.language-card {
+    width: 80px;
+    height: 85px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #f8faff;
+
+    border: 1px solid #e0e7ff;
+}
+
+.language-card strong {
+    color: #4f46e5;
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+.language-card span {
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   SAFETY
+   ========================= */
+
+.safety-section {
+    background: #f8faff;
+}
+
+.safety-card {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    display: flex;
+
+    gap: 20px;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf5,
+            #fff7ed
+        );
+}
+
+.safety-icon {
+    width: 55px;
+    height: 55px;
+
+    min-width: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #ffedd5;
+
+    font-size: 25px;
+}
+
+.safety-card h2 {
+    margin: 7px 0 10px;
+
+    color: #9a3412;
+
+    font-size: 22px;
+}
+
+.safety-card p {
+    color: #57534e;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.safety-highlight {
+    margin-top: 10px;
+
+    font-weight: 700;
+
+    color: #9a3412 !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .workflow {
+        flex-wrap: wrap;
+    }
+
+    .workflow-second-row {
+        flex-wrap: wrap;
+    }
+
+    .workflow-arrow {
+        display: none;
+    }
+
+    .workflow-step {
+        flex: 0 0 28%;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .about-hero h1 {
+        font-size: 35px;
+    }
+
+    .intro-cards,
+    .technology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .language-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-section,
+    .technology-section,
+    .safety-section {
+        padding: 50px 5%;
+    }
+
+    .about-hero {
+        padding: 50px 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 30px;
+    }
+
+    .workflow {
+        flex-direction: column;
+    }
+
+    .workflow-second-row {
+        flex-direction: column;
+    }
+
+    .workflow-step {
+        flex: 1;
+        width: 100%;
+    }
+
+    .language-options {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .safety-card {
+        flex-direction: column;
+    }
+
+}

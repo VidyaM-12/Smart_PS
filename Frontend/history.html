@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prescription History | SmartRx</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/history.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            ✚
+        </div>
+
+        <div>
+            <h2>
+                Smart<span>Rx</span>
+            </h2>
+
+            <p>
+                Prescription Reader
+            </p>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="reader.html">
+            Reader
+        </a>
+
+        <a href="history.html" class="active">
+            History
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+
+    <button
+        class="nav-reader-btn"
+        onclick="window.location.href='reader.html'"
+    >
+        + New Prescription
+    </button>
+
+</header>
+
+
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="history-header">
+
+    <div class="section-badge">
+        PRESCRIPTION HISTORY
+    </div>
+
+    <h1>
+        Your
+        <span>History</span>
+    </h1>
+
+    <p>
+        View and manage your previously analyzed prescriptions.
+    </p>
+
+</section>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="history-container">
+
+
+    <!-- ================= SUMMARY CARDS ================= -->
+
+    <div class="history-summary">
+
+        <div class="summary-card">
+
+            <div class="summary-icon blue-summary">
+                📄
+            </div>
+
+            <div>
+
+                <span>
+                    TOTAL PRESCRIPTIONS
+                </span>
+
+                <strong>
+                    3
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon purple-summary">
+                💊
+            </div>
+
+            <div>
+
+                <span>
+                    MEDICINES IDENTIFIED
+                </span>
+
+                <strong>
+                    6
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon green-summary">
+                ✓
+            </div>
+
+            <div>
+
+                <span>
+                    LAST ANALYZED
+                </span>
+
+                <strong>
+                    Today
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= HISTORY TOP BAR ================= -->
+
+    <div class="history-topbar">
+
+        <div>
+
+            <span>
+                RECENT ACTIVITY
+            </span>
+
+            <h2>
+                Analyzed Prescriptions
+            </h2>
+
+        </div>
+
+
+        <div class="history-controls">
+
+            <select id="historyFilter">
+
+                <option value="all">
+                    All Prescriptions
+                </option>
+
+                <option value="today">
+                    Today
+                </option>
+
+                <option value="week">
+                    This Week
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= HISTORY LIST ================= -->
+
+    <div class="history-list" id="historyList">
+
+
+        <!-- ================= ITEM 1 ================= -->
+
+        <div class="history-card">
+
+            <div class="history-file-icon blue-file">
+                📄
+            </div>
+
+
+            <div class="history-main">
+
+                <div class="history-title-row">
+
+                    <h3>
+                        Prescription_001
+                    </h3>
+
+                    <span class="status-complete">
+                        ✓ Analyzed
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Paracetamol • Cetirizine
+                </p>
+
+
+                <span class="history-date">
+                    Today • 6:42 PM
+                </span>
+
+            </div>
+
+
+            <div class="history-language">
+
+                <span>
+                    LANGUAGE
+                </span>
+
+                <strong>
+                    English
+                </strong>
+
+            </div>
+
+
+            <div class="history-actions">
+
+                <button
+                    onclick="viewPrescription('Prescription_001')"
+                    class="view-button"
+                >
+                    View
+                </button>
+
+                <button
+                    onclick="deletePrescription(this)"
+                    class="delete-button"
+                >
+                    🗑
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= ITEM 2 ================= -->
+
+        <div class="history-card">
+
+            <div class="history-file-icon purple-file">
+                📄
+            </div>
+
+
+            <div class="history-main">
+
+                <div class="history-title-row">
+
+                    <h3>
+                        Prescription_002
+                    </h3>
+
+                    <span class="status-complete">
+                        ✓ Analyzed
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Amoxicillin • Paracetamol
+                </p>
+
+
+                <span class="history-date">
+                    Yesterday • 4:18 PM
+                </span>
+
+            </div>
+
+
+            <div class="history-language">
+
+                <span>
+                    LANGUAGE
+                </span>
+
+                <strong>
+                    Kannada
+                </strong>
+
+            </div>
+
+
+            <div class="history-actions">
+
+                <button
+                    onclick="viewPrescription('Prescription_002')"
+                    class="view-button"
+                >
+                    View
+                </button>
+
+                <button
+                    onclick="deletePrescription(this)"
+                    class="delete-button"
+                >
+                    🗑
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= ITEM 3 ================= -->
+
+        <div class="history-card">
+
+            <div class="history-file-icon orange-file">
+                📄
+            </div>
+
+
+            <div class="history-main">
+
+                <div class="history-title-row">
+
+                    <h3>
+                        Prescription_003
+                    </h3>
+
+                    <span class="status-complete">
+                        ✓ Analyzed
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Azithromycin • Cetirizine
+                </p>
+
+
+                <span class="history-date">
+                    17 Sep 2026 • 7:25 PM
+                </span>
+
+            </div>
+
+
+            <div class="history-language">
+
+                <span>
+                    LANGUAGE
+                </span>
+
+                <strong>
+                    Hindi
+                </strong>
+
+            </div>
+
+
+            <div class="history-actions">
+
+                <button
+                    onclick="viewPrescription('Prescription_003')"
+                    class="view-button"
+                >
+                    View
+                </button>
+
+                <button
+                    onclick="deletePrescription(this)"
+                    class="delete-button"
+                >
+                    🗑
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= EMPTY STATE ================= -->
+
+    <div
+        class="empty-history"
+        id="emptyHistory"
+        style="display: none;"
+    >
+
+        <div class="empty-icon">
+            📋
+        </div>
+
+        <h2>
+            No prescriptions found
+        </h2>
+
+        <p>
+            Your analyzed prescriptions will appear here.
+        </p>
+
+        <button
+            onclick="window.location.href='reader.html'"
+        >
+            Analyze a Prescription
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= PRIVACY NOTE ================= -->
+
+    <div class="history-note">
+
+        <div class="note-icon">
+            🔒
+        </div>
+
+        <div>
+
+            <h3>
+                Your Prescription Data
+            </h3>
+
+            <p>
+                Prescription history will be securely stored in the
+                SmartRx database when the backend is connected.
+                You will be able to view or delete your saved records.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <div class="logo-icon">
+            ✚
+        </div>
+
+        <div>
+
+            <strong>
+                Smart<span>Rx</span>
+            </strong>
+
+            <small>
+                Prescription Reader
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <p>
+        AI-assisted handwritten prescription understanding.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="reader.html">
+            Reader
+        </a>
+
+        <a href="history.html">
+            History
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Smart Prescription Reader. Academic Project.
+    </div>
+
+</footer>
+
+
+
+<script src="js/history.js"></script>
+
+</body>
+
+</html>

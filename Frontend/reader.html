@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prescription Reader | SmartRx</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reader.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">✚</div>
+
+            <div>
+                <h2>Smart<span>Rx</span></h2>
+                <p>Prescription Reader</p>
+            </div>
+
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="reader.html" class="active">Reader</a>
+            <a href="history.html">History</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <button class="nav-reader-btn">
+            Reader Active
+        </button>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="reader-header">
+
+        <div class="section-badge">
+            AI PRESCRIPTION READER
+        </div>
+
+        <h1>
+            Read Your
+            <span>Prescription</span>
+        </h1>
+
+        <p>
+            Upload a clear image of your handwritten prescription
+            and let SmartRx analyze it.
+        </p>
+
+    </section>
+
+
+    <!-- ================= READER AREA ================= -->
+
+    <main class="reader-container">
+
+        <div class="reader-card">
+
+
+            <!-- ================= UPLOAD AREA ================= -->
+
+            <div class="upload-area" id="uploadArea">
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h2>Upload Prescription</h2>
+
+                <p>
+                    Drag and drop your prescription image here
+                </p>
+
+                <span class="or-text">
+                    or
+                </span>
+
+                <label for="prescriptionInput" class="upload-button">
+                    📁 Choose Image
+                </label>
+
+                <input
+                    type="file"
+                    id="prescriptionInput"
+                    accept="image/*"
+                    hidden
+                >
+
+                <button
+                    class="camera-button"
+                    id="cameraButton"
+                    type="button"
+                >
+                    📷 Use Camera
+                </button>
+
+                <p class="file-info">
+                    Supported formats: JPG, JPEG, PNG
+                </p>
+
+            </div>
+
+
+            <!-- ================= IMAGE PREVIEW ================= -->
+
+            <div
+                class="preview-area"
+                id="previewArea"
+                style="display: none;"
+            >
+
+                <div class="preview-header">
+
+                    <div>
+                        <span class="small-label">
+                            SELECTED PRESCRIPTION
+                        </span>
+
+                        <h3>Image Preview</h3>
+                    </div>
+
+                    <button
+                        class="remove-button"
+                        id="removeButton"
+                        type="button"
+                    >
+                        ✕ Remove
+                    </button>
+
+                </div>
+
+
+                <div class="image-preview-box">
+
+                    <img
+                        id="previewImage"
+                        src=""
+                        alt="Prescription Preview"
+                    >
+
+                </div>
+
+
+                <div class="image-details">
+
+                    <div>
+                        <span>File Name</span>
+                        <strong id="fileName">
+                            -
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>File Size</span>
+                        <strong id="fileSize">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="process-button"
+                    id="processButton"
+                    type="button"
+                >
+                    ✨ Analyze Prescription
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= INFORMATION CARDS ================= -->
+
+        <div class="reader-info-grid">
+
+            <div class="reader-info-card">
+
+                <div class="info-icon blue-info">
+                    💡
+                </div>
+
+                <div>
+                    <h3>For Better Results</h3>
+
+                    <p>
+                        Make sure the prescription is clearly visible,
+                        well-lit and not blurry.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="reader-info-card">
+
+                <div class="info-icon purple-info">
+                    🧠
+                </div>
+
+                <div>
+                    <h3>AI Analysis</h3>
+
+                    <p>
+                        The uploaded image will later be processed
+                        using OCR and AI recognition models.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="reader-info-card">
+
+                <div class="info-icon orange-info">
+                    ⚠️
+                </div>
+
+                <div>
+                    <h3>Verify Results</h3>
+
+                    <p>
+                        AI recognition can make mistakes. Always verify
+                        results with a qualified medical professional.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <div class="logo-icon">
+                ✚
+            </div>
+
+            <div>
+                <strong>
+                    Smart<span>Rx</span>
+                </strong>
+
+                <small>
+                    Prescription Reader
+                </small>
+            </div>
+
+        </div>
+
+        <p>
+            AI-assisted handwritten prescription understanding.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="reader.html">Reader</a>
+            <a href="history.html">History</a>
+            <a href="about.html">About</a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Smart Prescription Reader. Academic Project.
+        </div>
+
+    </footer>
+
+
+    <script src="js/reader.js"></script>
+
+</body>
+</html>

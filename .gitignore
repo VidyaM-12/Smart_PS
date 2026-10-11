@@ -1,0 +1,47 @@
+# =========================================================
+# Smart Prescription Reader - .gitignore
+# =========================================================
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ---- Virtual environments ----
+venv/
+.venv/
+env/
+ENV/
+
+# ---- Environment variables / secrets ----
+.env
+.env.*
+
+# ---- Uploaded prescription images (keep the folder) ----
+Backend/uploads/*
+!Backend/uploads/.gitkeep
+
+# ---- Node (in case frontend tooling is added later) ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- OS / editor cruft ----
+*.lnk
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+
+# ---- IDE / editor folders ----
+.vscode/
+.idea/
+*.iml
+
+# ---- Logs ----
+*.log

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Prescription Reader</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">✚</div>
+
+            <div>
+                <h2>Smart<span>Rx</span></h2>
+                <p>Prescription Reader</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="reader.html">Reader</a>
+            <a href="history.html">History</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <button class="nav-reader-btn" onclick="openReader()">
+            Try Reader →
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                ✨ AI-Powered Prescription Understanding
+            </div>
+
+            <h1>
+                Turn Handwritten
+                <span>Prescriptions</span>
+                Into Clear Information
+            </h1>
+
+            <p>
+                Upload or capture a handwritten prescription and let
+                SmartRx help convert difficult-to-read medical handwriting
+                into structured, readable information.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" onclick="openReader()">
+                    📄 Upload Prescription
+                </button>
+
+                <button class="secondary-btn" onclick="openReader()">
+                    📷 Capture with Camera
+                </button>
+
+            </div>
+
+            <div class="trust-text">
+                🔒 Your prescription information is handled securely
+            </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="floating-circle circle-one"></div>
+            <div class="floating-circle circle-two"></div>
+
+            <div class="prescription-card">
+
+                <div class="card-header">
+
+                    <div class="doctor-icon">
+                        🩺
+                    </div>
+
+                    <div>
+                        <strong>Prescription</strong>
+                        <small>AI Analysis Preview</small>
+                    </div>
+
+                    <div class="status-dot"></div>
+
+                </div>
+
+
+                <div class="fake-prescription">
+
+                    <div class="scribble large">
+                        ℛx
+                    </div>
+
+                    <div class="scribble">
+                        Paracetamol 500 mg
+                    </div>
+
+                    <div class="scribble">
+                        1 tablet — twice daily
+                    </div>
+
+                    <div class="scribble">
+                        After food — 5 days
+                    </div>
+
+                </div>
+
+
+                <div class="ai-result">
+
+                    <div class="ai-icon">
+                        ✨
+                    </div>
+
+                    <div>
+                        <span>AI Recognition</span>
+                        <strong>Information Detected</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="stat-item">
+            <div class="stat-icon blue">📝</div>
+            <div>
+                <strong>OCR</strong>
+                <span>Text Extraction</span>
+            </div>
+        </div>
+
+        <div class="stat-item">
+            <div class="stat-icon purple">🧠</div>
+            <div>
+                <strong>AI</strong>
+                <span>Smart Recognition</span>
+            </div>
+        </div>
+
+        <div class="stat-item">
+            <div class="stat-icon pink">💊</div>
+            <div>
+                <strong>Medicine</strong>
+                <span>Information Detection</span>
+            </div>
+        </div>
+
+        <div class="stat-item">
+            <div class="stat-icon orange">🔊</div>
+            <div>
+                <strong>Voice</strong>
+                <span>Read Aloud</span>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-section">
+
+        <div class="section-heading">
+
+            <div class="section-badge">
+                SIMPLE & SMART
+            </div>
+
+            <h2>How SmartRx Works</h2>
+
+            <p>
+                From handwritten prescription to understandable information
+                in a few simple steps.
+            </p>
+
+        </div>
+
+
+        <div class="steps-container">
+
+            <div class="step-card">
+
+                <div class="step-number">01</div>
+
+                <div class="step-icon blue-bg">
+                    📷
+                </div>
+
+                <h3>Upload or Capture</h3>
+
+                <p>
+                    Upload a prescription image or capture one
+                    directly using your camera.
+                </p>
+
+            </div>
+
+
+            <div class="step-arrow">
+                →
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">02</div>
+
+                <div class="step-icon purple-bg">
+                    ✨
+                </div>
+
+                <h3>AI Processing</h3>
+
+                <p>
+                    Image processing, OCR and AI models analyze
+                    the handwritten prescription.
+                </p>
+
+            </div>
+
+
+            <div class="step-arrow">
+                →
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">03</div>
+
+                <div class="step-icon pink-bg">
+                    💊
+                </div>
+
+                <h3>Get Clear Results</h3>
+
+                <p>
+                    View medicines, dosage, frequency, duration
+                    and instructions in a structured format.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features-section">
+
+        <div class="section-heading">
+
+            <div class="section-badge">
+                POWERFUL FEATURES
+            </div>
+
+            <h2>Everything in One Place</h2>
+
+            <p>
+                Designed to make difficult handwritten prescriptions
+                easier to understand.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature-card blue-card">
+
+                <div class="feature-icon">
+                    📝
+                </div>
+
+                <h3>Handwriting Recognition</h3>
+
+                <p>
+                    Analyze handwritten prescription content
+                    using OCR and AI-based recognition.
+                </p>
+
+                <span class="feature-link">
+                    Smart Recognition →
+                </span>
+
+            </div>
+
+
+            <div class="feature-card purple-card">
+
+                <div class="feature-icon">
+                    🧠
+                </div>
+
+                <h3>AI Analysis</h3>
+
+                <p>
+                    CNN and MLP models can help identify and
+                    classify prescription information.
+                </p>
+
+                <span class="feature-link">
+                    AI Powered →
+                </span>
+
+            </div>
+
+
+            <div class="feature-card pink-card">
+
+                <div class="feature-icon">
+                    💊
+                </div>
+
+                <h3>Medicine Details</h3>
+
+                <p>
+                    Organize recognized medicine names, dosage,
+                    frequency and duration clearly.
+                </p>
+
+                <span class="feature-link">
+                    Structured Results →
+                </span>
+
+            </div>
+
+
+            <div class="feature-card orange-card">
+
+                <div class="feature-icon">
+                    🔊
+                </div>
+
+                <h3>Voice Support</h3>
+
+                <p>
+                    Listen to the recognized prescription information
+                    using text-to-speech.
+                </p>
+
+                <span class="feature-link">
+                    Listen Easily →
+                </span>
+
+            </div>
+
+
+            <div class="feature-card green-card">
+
+                <div class="feature-icon">
+                    🌐
+                </div>
+
+                <h3>Translation</h3>
+
+                <p>
+                    Make recognized information easier to understand
+                    with multilingual support.
+                </p>
+
+                <span class="feature-link">
+                    Multiple Languages →
+                </span>
+
+            </div>
+
+
+            <div class="feature-card cyan-card">
+
+                <div class="feature-icon">
+                    🗂️
+                </div>
+
+                <h3>Prescription History</h3>
+
+                <p>
+                    Keep track of previously processed prescriptions
+                    through your history.
+                </p>
+
+                <span class="feature-link">
+                    View History →
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SAFETY NOTICE ================= -->
+
+    <section class="safety-section">
+
+        <div class="safety-icon">
+            ⚠️
+        </div>
+
+        <div>
+
+            <h3>Important Medical Notice</h3>
+
+            <p>
+                SmartRx is designed to assist in understanding handwritten
+                prescriptions. AI-generated results may contain errors and
+                should always be verified with a qualified doctor or pharmacist.
+                This system does not replace professional medical advice.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta-section">
+
+        <div class="cta-content">
+
+            <span>READY TO TRY IT?</span>
+
+            <h2>
+                Make Your Prescription
+                Easier to Understand.
+            </h2>
+
+            <p>
+                Upload a prescription and explore the SmartRx experience.
+            </p>
+
+            <button class="cta-button" onclick="openReader()">
+                Start Reading Prescription →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <div class="logo-icon">✚</div>
+
+            <div>
+                <strong>Smart<span>Rx</span></strong>
+                <small>Prescription Reader</small>
+            </div>
+        </div>
+
+        <p>
+            AI-assisted handwritten prescription understanding.
+        </p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="reader.html">Reader</a>
+            <a href="history.html">History</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <div class="copyright">
+            © 2026 Smart Prescription Reader. Academic Project.
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
